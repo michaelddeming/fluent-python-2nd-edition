@@ -199,5 +199,28 @@
 
 ![alt text](image-20.png)
 
+## list.sort Versus the sorted Built-In
 
+- `list.sort()`: Sorts a list in place, without making a copy. Returns None. 
+    - Functions that change data structures in place should return None to make it clear to the calelr that the reciever was changed.
+        - Drawback is that functions that return None cannot be cascaded. 
+- `sorted(list)`: Creates a new sorted list and returns it. Accepts any iterable object as an argument, including immutable sequences and generators.
 
+- Both `list.sort()`and `sorted(list)` take two optional, keyword-only arguments:
+    1. `reverse`: If True, the items are returned in descending order. The default is False.
+    2. `key`: A one-argument function that will be applied to each item to produce its sorting key. For example, key=len will sort the the values by their length. 
+
+![alt text](image-21.png)
+![alt text](image-22.png)
+
+## When a List Is Not the Answer
+
+### Arrays
+
+- If a `list` only contains numbers, an `array.array` is a more efficient replacement. 
+
+- Typecodes: A single-letter code passed as a parameter when creating an array. It specifies the C data type used to store elements, determining the type and size of values allowed in the array.
+    - Example:
+        - `'b'`: Signed char (1 byte, range -128 to 127)
+        - `'h'`: Signed short (2 bytes)
+        - `'f'`: Float (4 bytes)
