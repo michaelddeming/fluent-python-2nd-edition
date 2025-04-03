@@ -224,3 +224,33 @@
         - `'b'`: Signed char (1 byte, range -128 to 127)
         - `'h'`: Signed short (2 bytes)
         - `'f'`: Float (4 bytes)
+
+### Memory Views
+
+- `memoryview`: A shared-memory sequence type that lets you handle slices of arrays without copying bytes. 
+    - Creating a `memoryview` over an array will allow the array to reform its structure using the `memoryview.cast` method, all while still referencing the original array in memory. 
+
+### NumPy
+
+- Numpy: 
+    - Implements multidimensional, homogeneous arrays and matrix types that hold not only numbers but also user-defined records, and provides efficient element-wise operations. 
+
+- SciPy: A library written on top of NumPy, offering many scientific computing algorithms from linear algebra, numerical calculus, and statistics. 
+    - Fast and reliable because it leverages the C and Fortran codebase from the **Netlib Repository**. 
+
+![alt text](image-23.png)
+
+- Pandas: Implements efficient array types that can hold non-numeric data and provides import/export functions for many different formats, like *.csv*, *.xls*, SQL dumps, HDF5, etc. 
+
+
+### Deques and Other Queues
+
+- `.pop()` and `.append` methods make a `list` usable as a stack or a queue (FIFO with `.append` and `.pop(0)`)
+    - Inserting at the head, index 0, is costly because all element to to right of the insertion or deletion must be shifted in memory. 
+
+- `collections.deque`: Double-ended queue designed for fast inserting and removing from both ends. 
+    - `deque` can be *bounded*, where it is created with a fixed maximum lenght. If an append call is made on a full deque, a pop must take place to free a spot.
+
+![alt text](image-24.png)
+
+
