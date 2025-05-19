@@ -69,3 +69,23 @@ its count.
 
 
 ### Subclassing UserDict Instead of dict   
+
+
+## Immutable Mappings
+
+- Mapping types provided by the standard library are all mutable, but the `Types` module provides a *wrapper* class called `MappingProxyType`, which, when given a mapping, return a **read-only** `mappingproxy` instance. 
+
+![alt text](image-7.png)
+
+## Dictionary Views
+
+- Read-only projections of the internal data structures used in the `dict` implementation.
+    - A view object us a dynamic proxy. If the source `dict` is updated, these changes will be reflected in teh exisiting view. 
+
+- `dict.keys()`: `dict` object instance method that returns instances of classes called `dict_items`. Just the `key`(s) are returned.
+- `dict.values()`: `dict` object instance method that returns instances of classes called `dict_items`. Just the `value`(s) are returned.
+- `dict.items()`: `dict` object instance method that returns instances of classes called `dict_items`. Both the `key` and the `value` are returned.
+     
+
+## Practical Consequences of How `dict` Works
+
