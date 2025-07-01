@@ -89,3 +89,37 @@ its count.
 
 ## Practical Consequences of How `dict` Works
 
+## Set Theory
+
+- `set`: a collection of unique objects.
+- `frozenset`: an immutable version of a set object.
+    - `frozenset(interable: list, set, or tuple)`
+
+![alt text](image-8.png)
+
+- Elements within a set must be *hashable*.
+    - A `set` itself is not hashable, thus you cannot nest a `set` within a `set`.
+    - However `frozenset` is hashable and can be added into a `set`. 
+
+- `set` Operators (Given two `sets`, a and b):
+    - `a | b`: Return the union of a and b.
+        - Combines two or more `sets` into a single `set`, containing all unique elements involved in the `sets`.
+    - `a & b`: Computes the intersection.
+        - Returns a new set with common elements between two or more `sets`.
+    - `a - b`: Computes the difference.
+        - Returns a new set containing elements from the first set that are not present in the second set.
+    - `a ^ b`: Computes the symmetric difference.
+        - Returns a new set containing elements that are present in either of the two sets but not in both.
+
+### Set Literals
+
+- `set()`: Used to create an **empty** `set`.
+    - `{}`: Used to create an **empty** `dict`.
+- `{1, 2, 3, ...}`: Used to create a **nonempty** `set`.
+
+### Set Comprehensions
+
+![alt text](image-9.png)
+
+## Practical Consequences of How Sets Work
+
