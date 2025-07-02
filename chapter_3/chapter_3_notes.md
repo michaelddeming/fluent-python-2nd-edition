@@ -123,3 +123,14 @@ its count.
 
 ## Practical Consequences of How Sets Work
 
+### Set Operations
+
+## Set Operations and `dict` Views
+
+- `dict.keys()` and `dict.items()` return values can interact with `set` operations.
+    - NOTE `dict.items()` and `set` operations only work if ALL values with in the `dict` are hashable, TypeError raised.
+    - By definition, `dict.keys()` are always hashable.
+
+![alt text](image-10.png)
+
+
