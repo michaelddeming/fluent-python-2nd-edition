@@ -66,3 +66,32 @@
 
 ### BOM: A Useful Gremlin
 
+- BOM (Byte-order Mark): A special marker placed at the beginning of a text file that tells a computer how to read multi-byte characters. 
+
+- Byte Order: 
+    - Little-endian: The least important byte (smallest part) comes first.
+    - Big-endian: The most important byte (biggest part) comes first.
+
+- Because UTF-16 and UTF-32 use multiple bytes to store one character, the order matters. If two computers have different default byte orders, they might misread the characters unless there’s a BOM telling them what to expect.
+
+- Example:
+    - "E"
+        - Unicode Code Point: U+0045
+        - Hex: 0045
+        - UTF-16be: 00 45 (big-endian)
+        - UTF-16le: 45 00 (little-endian)
+
+### Handling Text Files
+
+- "Unicode Sandwich":
+    - Bytes should be decoded as early as possible to `str` (top piece of bread).
+    - Operations are performed on `str` (text) only (sandwich filling).
+    - Finalized text is encoded on output (bottom piece of bread).
+
+![alt text](image-6.png)
+
+
+### Beware of Encoding Defaults
+
+## Normalizing Unicode for Reliable Comparisions
+
