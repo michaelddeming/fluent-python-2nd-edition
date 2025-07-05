@@ -95,3 +95,20 @@
 
 ## Normalizing Unicode for Reliable Comparisions
 
+- Canonical Equivalents: In Unicode, two different sequences of code points represent the same character or *visual appearance*, and are considered equal in meaning and form. BUT Python sees them as two **different** code points and considers them NOT equal.
+    - Example: `é`& `e\u0301`
+    - `unicodedata.normalize(arg1, arg2)`:
+        - `arg1`: One of the following 4 strings:
+            1. "NFC": Normalize Form C composes the code points to produce the shortest equivalent string.
+            2. "NFD": Normalize Form D decomposes, expanding composed characters, into base characters and separate combining characters. 
+            3. "NFKC":
+            4. "NFKD":
+
+![alt text](image-7.png)
+
+### Case Folding
+
+- Case Folding: Converting all text to lowercase and doing some additional transformations, supported by `str.casefold()`.
+
+### Utility Functions for Normalized Text Matching
+
