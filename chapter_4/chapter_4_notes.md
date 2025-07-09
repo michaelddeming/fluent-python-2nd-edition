@@ -112,3 +112,11 @@
 
 ### Utility Functions for Normalized Text Matching
 
+### Extreme "Normalization": Taking Out Diacritics
+
+- Diacritics: Accents, cedillas, etc.
+
+![alt text](image-8.png)
+
+## Sorting Unicode Text
+
