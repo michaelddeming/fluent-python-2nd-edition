@@ -29,3 +29,12 @@
 ![alt text](image-5.png)
 
 ## Classic Named Tuples 
+
+- `collections.namedtuple`: A factory that builds subclasses of `tuple` enhanced with field names, a class name, and __repr__. 
+    - `defaults=`: The defaults= keyword argument allows you to specify default values for one or more fields (from the rightmost fields only).
+
+![alt text](image-6.png)
+
+## Typed Named Tuples
+
+
